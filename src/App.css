@@ -1,0 +1,79 @@
+/* Page layout
+   Desktop: logo and top navigation share the first row,
+   main content and footer span the full width below.
+   Content is centered in a column of --content-width. */
+#root {
+  --content-width: 860px;
+  --page-gutter: max(1rem, calc((100vw - var(--content-width)) / 2));
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'header nav'
+    'main   main'
+    'footer footer';
+  align-items: center;
+}
+
+#root > header {
+  grid-area: header;
+  padding-inline-start: var(--page-gutter);
+}
+
+#root > nav {
+  grid-area: nav;
+  padding-inline-end: var(--page-gutter);
+}
+
+#root > main {
+  grid-area: main;
+  padding-inline: var(--page-gutter);
+}
+
+#root > footer {
+  grid-area: footer;
+  padding-inline: var(--page-gutter);
+}
+
+/* Top navigation: links in one row, aligned to the right */
+#root > nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Footer: logo, doormat navigation, contact and social links in four columns */
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Mobile: everything in one column */
+@media (max-width: 768px) {
+  #root {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'nav'
+      'main'
+      'footer';
+  }
+
+  #root > header,
+  #root > nav {
+    padding-inline: var(--page-gutter);
+  }
+
+  #root > nav ul {
+    justify-content: flex-start;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
