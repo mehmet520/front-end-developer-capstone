@@ -31,3 +31,78 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Typography: values from the Little Lemon style guide */
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+h1 {
+  font-size: 4rem; /* 64px, Display title */
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.5rem; /* 40px, Display subtitle */
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.125rem; /* 18px, Card title */
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 65ch; /* style guide: max 65 characters per line */
+}
+
+/* Links */
+a {
+  color: inherit;
+}
+
+nav a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-primary-green);
+  text-decoration: underline;
+}
+
+/* Footer section titles: Section title style */
+footer h2 {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Browsers show <address> in italics by default */
+address {
+  font-style: normal;
+}
+
+/* Images inside the page content get the rounded corners of the UI kit */
+main img {
+  border-radius: 16px;
+}
+
+/* Smaller headings on small screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
