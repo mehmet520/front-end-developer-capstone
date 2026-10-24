@@ -1,0 +1,18 @@
+.confirmed {
+  padding-block: 1rem 3rem;
+}
+
+.booking-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin-block: 1rem 2rem;
+}
+
+.booking-summary dt {
+  font-weight: 700;
+}
+
+.booking-summary dd {
+  margin: 0;
+}
