@@ -1,14 +1,11 @@
 import BookingSlot from './BookingSlot'
-import { initializeTimes } from '../utils/bookingTimes'
+import { allTimes } from '../utils/bookingTimes'
 import './BookingSlots.css'
-
-// Every bookable time; a time missing from availableTimes is already booked.
-const allTimes = initializeTimes()
 
 function BookingSlots({ availableTimes }) {
   return (
     <section className="booking-slots" aria-labelledby="booking-slots-title">
-      <h2 id="booking-slots-title">Today's times</h2>
+      <h2 id="booking-slots-title">Times for the selected date</h2>
       <ul>
         {allTimes.map((time) => (
           <BookingSlot

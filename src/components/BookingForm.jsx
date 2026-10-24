@@ -9,6 +9,9 @@ function BookingForm({ availableTimes, dispatch }) {
   const [guests, setGuests] = useState(1)
   const [occasion, setOccasion] = useState('Birthday')
 
+  // The date can change the list; fall back to the first time still available.
+  const selectedTime = availableTimes.includes(time) ? time : availableTimes[0]
+
   const handleSubmit = (e) => {
     e.preventDefault()
   }
@@ -30,7 +33,7 @@ function BookingForm({ availableTimes, dispatch }) {
       <label htmlFor="res-time">Choose time</label>
       <select
         id="res-time"
-        value={time}
+        value={selectedTime}
         onChange={(e) => setTime(e.target.value)}
       >
         {availableTimes.map((t) => (
