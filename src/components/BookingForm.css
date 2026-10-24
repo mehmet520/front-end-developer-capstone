@@ -37,3 +37,9 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.form-hint {
+  margin: 0;
+  color: #555555;
+  font-size: 0.875rem;
+}

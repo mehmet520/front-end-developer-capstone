@@ -71,8 +71,10 @@ nav a {
   text-decoration: none;
 }
 
+/* Current page in the main navigation (NavLink adds aria-current="page") */
 nav a:hover,
-nav a:focus-visible {
+nav a:focus-visible,
+nav a[aria-current='page'] {
   color: var(--color-primary-green);
   text-decoration: underline;
 }

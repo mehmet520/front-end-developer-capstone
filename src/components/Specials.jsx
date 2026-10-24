@@ -6,7 +6,7 @@ function Specials() {
   return (
     <section className="specials">
       <div className="specials-header">
-        <h2>This weeks specials!</h2>
+        <h2>This week's specials!</h2>
         <Link to="/menu" className="button-primary">
           Online Menu
         </Link>

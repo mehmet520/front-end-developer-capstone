@@ -23,6 +23,10 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const errors = validateBooking({ date, time: selectedTime, guests }, today)
   const isValid = Object.keys(errors).length === 0
   const showError = (field) => touched[field] && errors[field]
+  // Tells the user why the submit button is disabled.
+  const submitHint = errors.date
+    ? 'Choose a date to make your reservation.'
+    : 'Please correct the fields above to make your reservation.'
 
   const markTouched = (e) => setTouched({ ...touched, [e.target.name]: true })
 
@@ -121,7 +125,13 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         className="button-primary"
         value="Make Your reservation"
         disabled={!isValid}
+        aria-describedby={isValid ? undefined : 'submit-hint'}
       />
+      {!isValid && (
+        <p id="submit-hint" className="form-hint">
+          {submitHint}
+        </p>
+      )}
     </form>
   )
 }

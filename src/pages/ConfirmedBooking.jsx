@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import { formatLongDate } from '../utils/date'
 import './ConfirmedBooking.css'
 
 function ConfirmedBooking() {
@@ -12,7 +13,7 @@ function ConfirmedBooking() {
       {booking && (
         <dl className="booking-summary">
           <dt>Date</dt>
-          <dd>{booking.date}</dd>
+          <dd>{formatLongDate(booking.date)}</dd>
           <dt>Time</dt>
           <dd>{booking.time}</dd>
           <dt>Guests</dt>

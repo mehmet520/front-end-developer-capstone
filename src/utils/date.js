@@ -4,3 +4,13 @@ export function toDateString(date) {
   const day = String(date.getDate()).padStart(2, '0')
   return `${date.getFullYear()}-${month}-${day}`
 }
+
+// Formats 'YYYY-MM-DD' for people, e.g. 'Friday, November 6, 2026'.
+export function formatLongDate(dateString) {
+  return new Date(`${dateString}T00:00`).toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+}

@@ -1,25 +1,27 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 function Nav() {
   return (
     <nav aria-label="Main navigation">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" end>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <NavLink to="/menu">Menu</NavLink>
         </li>
         <li>
-          <Link to="/booking">Reservations</Link>
+          <NavLink to="/booking">Reservations</NavLink>
         </li>
         <li>
-          <Link to="/order">Order Online</Link>
+          <NavLink to="/order">Order Online</NavLink>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <NavLink to="/login">Login</NavLink>
         </li>
       </ul>
     </nav>

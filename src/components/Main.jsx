@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import HomePage from '../pages/HomePage'
 import BookingPage from '../pages/BookingPage'
 import ConfirmedBooking from '../pages/ConfirmedBooking'
+import ComingSoon from '../pages/ComingSoon'
 import { initializeTimes, updateTimes } from '../utils/bookingTimes'
 import { submitAPI } from '../api/api'
 
@@ -40,6 +41,7 @@ function Main() {
           }
         />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="*" element={<ComingSoon />} />
       </Routes>
     </main>
   )
