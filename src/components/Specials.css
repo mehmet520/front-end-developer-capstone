@@ -1,0 +1,58 @@
+/* Specials: heading row and a responsive row of cards */
+.specials {
+  padding-block: 3rem;
+}
+
+.specials-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.specials-cards {
+  display: grid;
+  /* as many columns as fit, each at least 15rem wide */
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--color-highlight-light);
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0; /* the card itself has the rounded corners */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-weight: 500; /* Highlight text */
+  color: var(--color-secondary-salmon);
+}
+
+.card-body a {
+  margin-top: auto; /* keeps the link at the bottom of every card */
+  font-weight: 700;
+}
