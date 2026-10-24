@@ -116,6 +116,12 @@ main img {
   background-color: var(--color-secondary-salmon);
 }
 
+/* Full-bleed band: background reaches the window edges, content stays in the column */
+  .full-bleed {
+    margin-inline: calc(-1 * var(--page-gutter));
+    padding-inline: var(--page-gutter);
+  }
+
 /* Smaller headings on small screens */
 @media (max-width: 768px) {
   h1 {

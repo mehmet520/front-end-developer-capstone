@@ -4,7 +4,7 @@ import './CallToAction.css'
 
 function CallToAction() {
   return (
-    <section className="hero">
+    <section className="hero full-bleed">
       <div className="hero-text">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>

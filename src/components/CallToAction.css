@@ -4,9 +4,7 @@
   grid-template-columns: 1fr auto;
   gap: 2rem;
   align-items: center;
-  /* stretch the green background to the window edges, keep content in the column */
-  margin-inline: calc(-1 * var(--page-gutter));
-  padding: 2rem var(--page-gutter);
+  padding-block: 2rem ;
   background-color: var(--color-primary-green);
 }
 
