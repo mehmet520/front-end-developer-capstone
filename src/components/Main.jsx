@@ -11,10 +11,18 @@ function Main() {
   const navigate = useNavigate()
 
   // Sends the booking to the API and opens the confirmation page on success.
+  // Returns false when the API rejects the booking or cannot be reached.
   function submitForm(formData) {
-    if (submitAPI(formData)) {
+    let ok
+    try {
+      ok = submitAPI(formData)
+    } catch {
+      ok = false
+    }
+    if (ok) {
       navigate('/confirmed', { state: formData })
     }
+    return ok
   }
 
   return (

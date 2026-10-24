@@ -12,6 +12,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [occasion, setOccasion] = useState('Birthday')
   // Fields the user has left once; their errors are shown from then on.
   const [touched, setTouched] = useState({})
+  const [submitError, setSubmitError] = useState('')
 
   // The date can change the list; fall back to the first time still available.
   const selectedTime = availableTimes.includes(time)
@@ -27,8 +28,10 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (isValid) {
-      submitForm({ date, time: selectedTime, guests, occasion })
+    if (!isValid) return
+    const ok = submitForm({ date, time: selectedTime, guests, occasion })
+    if (!ok) {
+      setSubmitError('Sorry, we could not send your booking. Please try again.')
     }
   }
 
@@ -106,6 +109,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           <option key={o}>{o}</option>
         ))}
       </select>
+
+      {submitError && (
+        <p className="field-error" role="alert">
+          {submitError}
+        </p>
+      )}
 
       <input
         type="submit"
