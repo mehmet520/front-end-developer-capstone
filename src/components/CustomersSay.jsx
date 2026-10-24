@@ -1,6 +1,7 @@
 import { testimonials } from '../data/testimonials'
 import './CustomersSay.css'
 
+// Testimonials section with sample customer reviews and star ratings.
 function CustomersSay() {
   return (
     <section className="testimonials full-bleed">

@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom'
+
+// Main navigation; NavLink marks the current page with aria-current="page".
 function Nav() {
   return (
     <nav aria-label="Main navigation">

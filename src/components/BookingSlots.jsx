@@ -2,6 +2,7 @@ import BookingSlot from './BookingSlot'
 import { allTimes } from '../utils/bookingTimes'
 import './BookingSlots.css'
 
+// List of all bookable times for the selected date; times missing from availableTimes are booked.
 function BookingSlots({ availableTimes }) {
   return (
     <section className="booking-slots" aria-labelledby="booking-slots-title">

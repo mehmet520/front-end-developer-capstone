@@ -5,6 +5,7 @@ import './BookingForm.css'
 
 const occasions = ['Birthday', 'Engagement', 'Anniversary']
 
+// Booking form: date, time, guests and occasion, with validation and error messages.
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState('')
   const [time, setTime] = useState('17:00')
@@ -33,7 +34,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!isValid) return
-    const ok = submitForm({ date, time: selectedTime, guests, occasion })
+    const ok = submitForm({
+      date,
+      time: selectedTime,
+      guests: Number(guests),
+      occasion,
+    })
     if (!ok) {
       setSubmitError('Sorry, we could not send your booking. Please try again.')
     }

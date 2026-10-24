@@ -7,6 +7,7 @@ import ComingSoon from '../pages/ComingSoon'
 import { initializeTimes, updateTimes } from '../utils/bookingTimes'
 import { submitAPI } from '../api/api'
 
+// Routes of the app; also holds the available booking times and submits bookings.
 function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes())
   const navigate = useNavigate()

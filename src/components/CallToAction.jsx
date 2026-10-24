@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import heroImage from '../assets/images/hero-restaurant-food.jpg'
 import './CallToAction.css'
 
+// Hero section of the home page with the main call to action: reserve a table.
 function CallToAction() {
   return (
     <section className="hero full-bleed">

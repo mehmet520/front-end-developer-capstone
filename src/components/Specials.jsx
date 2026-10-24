@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { specials } from '../data/specials'
 import './Specials.css'
 
+// This week's specials as cards, built from src/data/specials.js.
 function Specials() {
   return (
     <section className="specials">

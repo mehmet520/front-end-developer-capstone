@@ -2,6 +2,7 @@ import marioAndAdrianA from '../assets/images/mario-and-adrian-a.jpg'
 import marioAndAdrianB from '../assets/images/mario-and-adrian-b.jpg'
 import './Chicago.css'
 
+// About section: the story of Little Lemon and its owners, Mario and Adrian.
 function Chicago() {
   return (
     <section className="about">

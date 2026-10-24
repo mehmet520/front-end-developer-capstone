@@ -1,5 +1,6 @@
 import logo from '../assets/logo.svg'
 
+// Site header with the Little Lemon logo.
 function Header() {
   return (
     <header>

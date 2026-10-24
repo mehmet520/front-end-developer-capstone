@@ -1,6 +1,7 @@
 import BookingForm from '../components/BookingForm'
 import BookingSlots from '../components/BookingSlots'
 
+// Booking page: the form and the list of times for the selected date.
 function BookingPage({ availableTimes, dispatch, submitForm }) {
   return (
     <>

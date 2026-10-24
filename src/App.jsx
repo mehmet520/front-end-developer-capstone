@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
+// Page shell: skip link, header, navigation, routed main content and footer.
 function App() {
   return (
     <>

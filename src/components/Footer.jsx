@@ -1,6 +1,7 @@
-import logo from '../assets/logo.svg'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.svg'
 
+// Footer: logo, doormat navigation, contact details and social media links.
 function Footer() {
   return (
     <footer>
