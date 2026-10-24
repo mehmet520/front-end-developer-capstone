@@ -132,3 +132,37 @@ main img {
     font-size: 2rem;
   }
 }
+
+/* Text read by screen readers but not shown on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link: hidden above the page, slides in when reached with the keyboard */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary-yellow);
+  color: var(--color-highlight-dark);
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* main receives focus only from the skip link; no outline around the whole page */
+main:focus {
+  outline: none;
+}
