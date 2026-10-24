@@ -1,0 +1,27 @@
+.booking-slots {
+  padding-bottom: 3rem;
+}
+
+.booking-slots ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.5rem;
+  max-width: 30rem;
+  padding: 0;
+  list-style: none;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.slot-available {
+  background-color: var(--color-highlight-light);
+}
+
+.slot-booked {
+  background-color: var(--color-secondary-peach);
+}
